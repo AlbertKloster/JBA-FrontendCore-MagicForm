@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="assets/css/main.css" rel="stylesheet"/>
+</head >
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-sm">
+        <div class="container-fluid ps-0">
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="form-link" class="nav-link active ps-0 fw-bold" aria-current="page" href="#">From</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="history-link" class="nav-link fw-bold" href="history.html">History</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-sm form-container">
+    <form>
+        <div class="mb-3 mt-3">
+            <label for="first-name" class="form-label fw-bold">First Name</label>
+            <input
+              name="first-name"
+              id="first-name"
+              type="text"
+              class="form-control"
+              placeholder="Enter your first name"
+              oninput="saveLastForm()"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="last-name" class="form-label fw-bold">Last Name</label>
+            <input
+              name="last-name"
+              id="last-name"
+              type="text"
+              class="form-control"
+              placeholder="Enter your last name"
+              oninput="saveLastForm()"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+              oninput="saveLastForm()"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label fw-bold">Phone</label>
+            <input
+              name="phone"
+              id="phone"
+              type="tel"
+              class="form-control"
+              placeholder="Enter your phone number"
+              oninput="saveLastForm()"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="company" class="form-label fw-bold">Company</label>
+            <input
+              name="company"
+              id="company"
+              type="text"
+              class="form-control"
+              placeholder="Enter your company name"
+              oninput="saveLastForm()"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label fw-bold">Address</label>
+            <input
+              name="address"
+              id="address"
+              type="text"
+              class="form-control"
+              placeholder="Enter your address"
+              oninput="saveLastForm()"
+            />
+        </div>
+        <div class="d-flex justify-content-center">
+            <button
+              type="submit"
+              id="submit-button"
+              class="btn btn-secondary"
+              onclick="saveHistory()">
+                Submit form
+            </button>
+        </div>
+    </form>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>onload = loadLastForm</script>
+</body>
+</html>
